@@ -3,15 +3,11 @@ package io.tzero.aqa.framework.api.specs
 import io.restassured.builder.ResponseSpecBuilder
 
 object ResponseSpec {
-    val `200` = ResponseSpecBuilder()
-        .expectStatusCode(200)
-        .build()!!
+    val `200` = 200.toResponseSpec()
+    val `201` = 201.toResponseSpec()
+    val `400` = 400.toResponseSpec()
 
-    val `201` = ResponseSpecBuilder()
-        .expectStatusCode(201)
-        .build()!!
-
-    val `400` = ResponseSpecBuilder()
-        .expectStatusCode(400)
+    private fun Int.toResponseSpec() = ResponseSpecBuilder()
+        .expectStatusCode(this)
         .build()!!
 }
