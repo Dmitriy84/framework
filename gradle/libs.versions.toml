@@ -1,5 +1,5 @@
 [versions]
-jvm = "17"
+jvm = "19"
 kotlin = "1.8.21"
 junit = "5.9.2"
 spring-boot = "3.0.6"
