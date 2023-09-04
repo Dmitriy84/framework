@@ -1,6 +1,6 @@
 [versions]
 jvm = "19"
-kotlin = "1.8.21"
+kotlin = "1.9.10"
 junit = "5.9.2"
 spring-boot = "3.0.6"
 bouncycastle = "1.72"
