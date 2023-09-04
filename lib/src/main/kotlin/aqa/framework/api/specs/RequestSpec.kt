@@ -1,4 +1,4 @@
-package io.tzero.aqa.framework.api.specs
+package aqa.framework.api.specs
 
 import io.restassured.builder.RequestSpecBuilder
 import io.restassured.http.ContentType

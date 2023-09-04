@@ -1,4 +1,4 @@
-package io.tzero.aqa.framework.utils
+package aqa.framework.utils
 
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json

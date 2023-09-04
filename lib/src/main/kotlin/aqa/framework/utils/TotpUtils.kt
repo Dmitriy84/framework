@@ -1,4 +1,4 @@
-package io.tzero.aqa.framework.utils
+package aqa.framework.utils
 
 import de.taimos.totp.TOTP
 import org.apache.commons.codec.binary.Base32

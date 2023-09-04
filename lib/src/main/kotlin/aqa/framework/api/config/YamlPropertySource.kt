@@ -1,4 +1,4 @@
-package io.tzero.aqa.framework.api.config
+package aqa.framework.api.config
 
 import org.springframework.beans.factory.config.YamlPropertiesFactoryBean
 import org.springframework.core.env.PropertiesPropertySource
