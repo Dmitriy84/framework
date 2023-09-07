@@ -33,7 +33,7 @@ allprojects {
                 }
             }
         } catch (e: Exception) {
-            logger.warn("Unable to configure maven repository:", e)
+            logger.warn("Unable to configure maven repository since ARTIFACTORY_REPO_* variables were not set")
         }
     }
 
