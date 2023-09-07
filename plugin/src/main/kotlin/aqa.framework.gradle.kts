@@ -1,5 +1,7 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-import org.gradle.api.tasks.testing.logging.TestLogEvent.*
+import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
+import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.time.LocalDateTime
 
@@ -22,12 +24,16 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
-        maven {
-            url = uri(providers.gradleProperty("ARTIFACTORY_REPO_URI").get())
-            credentials {
-                username = providers.gradleProperty("ARTIFACTORY_REPO_USER").orNull
-                password = providers.gradleProperty("ARTIFACTORY_REPO_PASS").orNull
+        try {
+            maven {
+                url = uri(providers.gradleProperty("ARTIFACTORY_REPO_URI").get())
+                credentials {
+                    username = providers.gradleProperty("ARTIFACTORY_REPO_USER").orNull
+                    password = providers.gradleProperty("ARTIFACTORY_REPO_PASS").orNull
+                }
             }
+        } catch (e: Exception) {
+            logger.warn("Unable to configure maven repository:", e)
         }
     }
 
