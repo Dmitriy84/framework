@@ -59,6 +59,8 @@ gson = "com.google.code.gson:gson:2.10.1"
 qase-api = { module = "io.qase:qase-api", version.ref = "qase" }
 qase-junit5 = { module = "io.qase:qase-junit5", version.ref = "qase" }
 
+dynamodb = "com.amazonaws:aws-java-sdk-dynamodb:1.9.0"
+
 [bundles]
 junit5 = ["junit-api", "junit-engine", "junit-params"]
 selenium = ["selenium", "webdriver-manager"]
