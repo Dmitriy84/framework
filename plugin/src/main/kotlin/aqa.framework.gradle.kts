@@ -108,7 +108,11 @@ allprojects {
                 }
             }
 
-            useJUnitPlatform()
+            useJUnitPlatform {
+                if (project.hasProperty("includeTags")) {
+                    includeTags = setOf(project.property("includeTags").toString())
+                }
+            }
             testLogging {
                 events(PASSED, SKIPPED, FAILED)
                 exceptionFormat = TestExceptionFormat.FULL
