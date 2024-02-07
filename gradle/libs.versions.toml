@@ -9,6 +9,7 @@ jacoco = "0.8.8"
 restassured = "5.3.0"
 qase = "3.0.4"
 aws = "1.0.35"
+appium = "9.1.0"
 
 [libraries]
 junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
@@ -62,6 +63,8 @@ qase-junit5 = { module = "io.qase:qase-junit5", version.ref = "qase" }
 
 dynamodb = { module = "aws.sdk.kotlin:dynamodb", version.ref = "aws" }
 sns = { module = "aws.sdk.kotlin:sns-jvm", version.ref = "aws" }
+
+appium = { module = "io.appium:java-client", version.ref = "appium" }
 
 [bundles]
 junit5 = ["junit-api", "junit-engine", "junit-params"]
