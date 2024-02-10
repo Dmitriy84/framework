@@ -71,7 +71,8 @@ appium = { module = "io.appium:java-client", version.ref = "appium" }
 selenium = { module = "org.seleniumhq.selenium:selenium-java", version.ref = "selenium" }
 webdriver-manager = { module = "io.github.bonigarcia:webdrivermanager", version.ref = "webdriver-manager" }
 
-testcontainers = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+testcontainers-junit = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
+testcontainers-selenium = { module = "org.testcontainers:selenium", version.ref = "testcontainers" }
 
 [bundles]
 junit5 = ["junit-api", "junit-engine", "junit-params"]
@@ -81,6 +82,7 @@ bouncycastle-lib = ["bouncycastle-ext", "bouncycastle"]
 kotest = ["kotest-property", "kotest-framework-datatest", "kotest-framework-api", "kotest-runner-junit5", "kotest-spring"]
 restassured = ["restassured-lib", "restassured-ext"]
 qase = ["qase-api", "qase-junit5"]
+testcontainers = ["testcontainers-junit", "testcontainers-selenium"]
 
 [plugins]
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
