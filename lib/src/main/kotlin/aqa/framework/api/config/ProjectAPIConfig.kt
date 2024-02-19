@@ -14,12 +14,12 @@ import org.springframework.context.annotation.Scope
 
 @ComponentScan
 @Configuration
-@PropertySource("application-\${test.env:staging}.yml", factory = YamlPropertySource::class)
-open class ProjectConfig {
+@PropertySource("application-\${spring.profiles.active}.yml", factory = YamlPropertySource::class)
+open class ProjectAPIConfig {
     @Value("\${app.url}")
     private lateinit var baseURL: String
 
-    @Value("\${restassured.response.time}")
+    @Value("\${restassured.response.time:10000}")
     private lateinit var timeout: String
 
     @Bean
