@@ -1,20 +1,20 @@
 [versions]
 jvm = "19"
-kotlin = "1.9.20"
+kotlin = "1.9.22"
 junit = "5.10.2"
-spring-boot = "3.2.2"
-bouncycastle = "1.72"
-kotest = "5.5.5"
-jacoco = "0.8.8"
+spring-boot = "3.2.3"
+bouncycastle = "1.77"
+kotest = "5.8.0
+jacoco = "0.8.11"
 restassured = "5.4.0"
-qase = "3.0.4"
-aws = "1.0.59"
+qase = "3.2.0"
+aws = "1.0.63"
 
 appium = "9.1.0"
-selenium = "4.17.0"
-webdriver-manager = "5.6.3"
+selenium = "4.18.1"
+webdriver-manager = "5.7.0"
 
-testcontainers = "1.19.5"
+testcontainers = "1.19.6"
 
 [libraries]
 junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
@@ -49,7 +49,7 @@ json-assert = "net.javacrumbs.json-unit:json-unit-assertj:2.37.0"
 
 medici-auth = "io.medici.tzero:jwt-auth-util:6.0.0"
 
-kotlin-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0"
+kotlin-serialization-json = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
 
 kotest-framework-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
 kotest-framework-api = { module = "io.kotest:kotest-framework-api", version.ref = "kotest" }
@@ -86,10 +86,10 @@ testcontainers = ["testcontainers-junit", "testcontainers-selenium"]
 
 [plugins]
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
-spring-dependency = "io.spring.dependency-management:1.1.0"
+spring-dependency = "io.spring.dependency-management:1.1.4"
 kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-kotlin-dsl = "org.gradle.kotlin.kotlin-dsl:4.2.1"
+kotlin-dsl = "org.gradle.kotlin.kotlin-dsl:4.3.0"
 kotlin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
 ktlint = "org.jlleitschuh.gradle.ktlint:11.0.0"
 spotless = "com.diffplug.spotless:6.16.0"
