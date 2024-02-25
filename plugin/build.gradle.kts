@@ -11,5 +11,9 @@ repositories {
 }
 
 dependencies {
-    api(libs.kotlin.plugin)
+    arrayOf(
+        libs.kotlin.plugin,
+        libs.kotlin.serialization.plugin,
+        libs.allure.plugin,
+    ).forEach { api(it) }
 }

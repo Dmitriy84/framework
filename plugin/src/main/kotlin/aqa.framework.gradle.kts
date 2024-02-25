@@ -10,14 +10,24 @@ val versionCatalog = rootProject.extensions
     .named("libs")
 val jvm = versionCatalog.findVersion("jvm").get().displayName
 
+fun String.toLibPlugin(): String =
+    versionCatalog.findPlugin(this).get().get().pluginId
+
+fun String.toLibLibrary() =
+    versionCatalog.findLibrary(this).get()
+
+fun String.toLibBundle() =
+    versionCatalog.findBundle(this).get()
+
 plugins {
     kotlin("jvm")
 }
 
 allprojects {
     arrayOf(
-        versionCatalog.findPlugin("kotlin").get().get().pluginId,
-        versionCatalog.findPlugin("kotlin-serialization").get().get().pluginId,
+        "kotlin".toLibPlugin(),
+        "kotlin-serialization".toLibPlugin(),
+        "allure".toLibPlugin(),
         "java-library",
     ).forEach { apply(plugin = it) }
 
@@ -38,22 +48,20 @@ allprojects {
     }
 
     dependencies {
-        with(versionCatalog) {
-            arrayOf(
-                kotlin("test"),
-                findLibrary("kotlin-lib").get(),
-                findLibrary("kotlin-serialization-json").get(),
+        arrayOf(
+            kotlin("test"),
+            "kotlin-lib".toLibLibrary(),
+            "kotlin-serialization-json".toLibLibrary(),
 
-                findLibrary("totp").get(),
-                findLibrary("json-assert").get(),
+            "totp".toLibLibrary(),
+            "json-assert".toLibLibrary(),
 
-                findBundle("kotest").get(),
-                findBundle("junit5").get(),
-                findBundle("spring-boot-test").get(),
-                findBundle("qase").get(),
-                findBundle("restassured").get(),
-            ).forEach { api(it) }
-        }
+            "kotest".toLibBundle(),
+            "junit5".toLibBundle(),
+            "spring-boot-test".toLibBundle(),
+            "qase".toLibBundle(),
+            "restassured".toLibBundle(),
+        ).forEach { api(it) }
     }
 
     tasks {
@@ -113,6 +121,12 @@ allprojects {
                     includeTags = setOf(project.property("includeTags").toString())
                 }
             }
+
+            reports {
+//                html.required = true
+                junitXml.required = true
+            }
+
             testLogging {
                 events(PASSED, SKIPPED, FAILED)
                 exceptionFormat = TestExceptionFormat.FULL
