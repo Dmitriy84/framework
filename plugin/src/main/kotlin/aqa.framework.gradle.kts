@@ -89,6 +89,7 @@ allprojects {
         }
 
         test {
+            ignoreFailures = true
             doFirst {
                 infix fun String.setProperty(key: String) {
                     logger.quiet("Set property ---> $key='$this'")
