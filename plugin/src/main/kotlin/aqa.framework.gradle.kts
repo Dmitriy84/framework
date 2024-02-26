@@ -61,6 +61,7 @@ allprojects {
             "spring-boot-test".toLibBundle(),
             "qase".toLibBundle(),
             "restassured".toLibBundle(),
+            "allure-java-commons".toLibLibrary(),
         ).forEach { api(it) }
     }
 

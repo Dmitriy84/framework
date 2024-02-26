@@ -64,6 +64,7 @@ gson = "com.google.code.gson:gson:2.10.1"
 qase-api = { module = "io.qase:qase-api", version.ref = "qase" }
 qase-junit5 = { module = "io.qase:qase-junit5", version.ref = "qase" }
 allure-plugin = { module = "io.qameta.allure.gradle.allure:allure-plugin", version.ref = "allure" }
+allure-java-commons = "io.qameta.allure:allure-java-commons:2.25.0"
 
 dynamodb = { module = "aws.sdk.kotlin:dynamodb", version.ref = "aws" }
 sns = { module = "aws.sdk.kotlin:sns-jvm", version.ref = "aws" }
