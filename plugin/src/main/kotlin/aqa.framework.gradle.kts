@@ -27,7 +27,7 @@ allprojects {
     arrayOf(
         "kotlin".toLibPlugin(),
         "kotlin-serialization".toLibPlugin(),
-        "allure".toLibPlugin(),
+        "allure-aggregate-report".toLibPlugin(),
         "java-library",
     ).forEach { apply(plugin = it) }
 

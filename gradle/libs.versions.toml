@@ -96,3 +96,4 @@ ktlint = "org.jlleitschuh.gradle.ktlint:11.0.0"
 spotless = "com.diffplug.spotless:6.16.0"
 lombok = "io.freefair.lombok:8.0.0-rc2"
 allure = { id = "io.qameta.allure", version.ref = "allure" }
+allure-aggregate-report = { id = "io.qameta.allure-aggregate-report", version.ref = "allure" }
