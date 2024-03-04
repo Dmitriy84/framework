@@ -2,7 +2,7 @@
 jvm = "19"
 kotlin = "1.9.22"
 junit = "5.10.2"
-spring-boot = "3.2.3"
+spring-boot = "3.1.9"
 bouncycastle = "1.77"
 kotest = "5.8.0"
 jacoco = "0.8.11"
@@ -22,7 +22,7 @@ junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jun
 junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
 junit-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit" }
 
-playwright="com.microsoft.playwright:playwright:1.37.0"
+playwright = "com.microsoft.playwright:playwright:1.37.0"
 
 testng = "org.testng:testng:7.6.1"
 
@@ -67,6 +67,7 @@ allure-plugin = { module = "io.qameta.allure.gradle.allure:allure-plugin", versi
 allure-java-commons = "io.qameta.allure:allure-java-commons:2.25.0"
 
 dynamodb = { module = "aws.sdk.kotlin:dynamodb", version.ref = "aws" }
+dynamodb-spring = "com.github.derjust:spring-data-dynamodb:5.1.0"
 sns = { module = "aws.sdk.kotlin:sns-jvm", version.ref = "aws" }
 
 appium = { module = "io.appium:java-client", version.ref = "appium" }
