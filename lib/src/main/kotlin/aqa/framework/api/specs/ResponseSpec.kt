@@ -7,7 +7,8 @@ object ResponseSpec {
     val `201` = 201.toResponseSpec()
     val `400` = 400.toResponseSpec()
 
-    private fun Int.toResponseSpec() = ResponseSpecBuilder()
-        .expectStatusCode(this)
-        .build()!!
+    private fun Int.toResponseSpec() =
+        ResponseSpecBuilder()
+            .expectStatusCode(this)
+            .build()!!
 }

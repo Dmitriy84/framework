@@ -18,6 +18,7 @@ webdriver-manager = "5.7.0"
 testcontainers = "1.19.6"
 
 ktlint = "12.1.0"
+awaitility = "4.2.0"
 
 [libraries]
 junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
@@ -80,6 +81,8 @@ webdriver-manager = { module = "io.github.bonigarcia:webdrivermanager", version.
 
 testcontainers-junit = { module = "org.testcontainers:junit-jupiter", version.ref = "testcontainers" }
 testcontainers-selenium = { module = "org.testcontainers:selenium", version.ref = "testcontainers" }
+
+awaitility = { module = "org.awaitility:awaitility", version.ref = "awaitility" }
 
 [bundles]
 junit5 = ["junit-api", "junit-engine", "junit-params"]
