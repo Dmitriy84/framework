@@ -30,6 +30,7 @@ allprojects {
         "allure".toLibPlugin(),
         "allure-aggregate-report".toLibPlugin(),
         "java-library",
+        "ktlint".toLibPlugin(),
     ).forEach { apply(plugin = it) }
 
     repositories {

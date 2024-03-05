@@ -15,5 +15,6 @@ dependencies {
         libs.kotlin.plugin,
         libs.kotlin.serialization.plugin,
         libs.allure.plugin,
+        libs.ktlint.plugin,
     ).forEach { api(it) }
 }

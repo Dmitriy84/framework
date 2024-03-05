@@ -17,6 +17,8 @@ webdriver-manager = "5.7.0"
 
 testcontainers = "1.19.6"
 
+ktlint = "12.1.0"
+
 [libraries]
 junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
 junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
@@ -31,6 +33,8 @@ assertj = "org.assertj:assertj-core:3.24.2"
 kotlin-lib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
 kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-serialization-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+
+ktlint-plugin = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlint" }
 
 spring-boot-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
 spring-boot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
@@ -94,8 +98,8 @@ kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-dsl = "org.gradle.kotlin.kotlin-dsl:4.3.0"
 kotlin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
-ktlint = "org.jlleitschuh.gradle.ktlint:11.0.0"
 spotless = "com.diffplug.spotless:6.16.0"
 lombok = "io.freefair.lombok:8.0.0-rc2"
 allure = { id = "io.qameta.allure-adapter", version.ref = "allure" }
 allure-aggregate-report = { id = "io.qameta.allure-aggregate-report", version.ref = "allure" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
